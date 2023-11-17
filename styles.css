@@ -1,0 +1,127 @@
+body {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.modal-btn {
+    background-color: #666;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-btn:hover {
+    background-color: #888;
+  }
+  
+  .modal-btn:active {
+    background-color: #444;
+  }
+  
+  .modal-btn:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: -1;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .modal-btn:hover:before {
+    transform: scale(1.1);
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* overflow: hidden; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 5px;
+    height: auto;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .content_head {
+    margin-top: 50px;
+    background-color: #d8d8d8;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .content_text {
+    height: 20px;
+    width: 100px;
+    background-color: #858585;
+  }
+
+  .content_items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+    gap: 10px;
+  }
+
+  .content-item {
+    width: calc(25% - 10px);
+    height: 200px;
+    background-color: #d8d8d8;
+  }
+
+  @media (max-width: 916px) {
+    .content-item {
+        flex: calc(50% - 10px)
+     }
+   }
+
+  @media (max-width: 768px) {
+    .content-item {
+        height: 150px;
+     }
+   }
